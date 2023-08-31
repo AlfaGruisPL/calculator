@@ -1,22 +1,27 @@
-let x = +prompt("Ведіеть перше число");
-let input = prompt("Яку дію ви хочете виконати: +, -, *, /?");
-let y = +prompt("Ведіть друге число");
+let num1 = +prompt("Введіть перше число:");
+let operator = prompt("Яку дію Ви хочете виконати: +, -, *, /?");
+let num2 = +prompt("Введіть друге число:");
 
-switch (input) {
+switch (operator) {
     case "+":
-        alert(x + y);
+        alert( `Сума Ваших введених чисел = ${num1 + num2}`);
         break;
 
     case "-":
-        alert(x - y);
+        alert( `Різниця Ваших введених чисел = ${num1 - num2}`);
         break;
 
     case "*":
-        alert(x * y);
+        alert( `Добуток Ваших введених чисел = ${num1 * num2}`);
         break;
 
     case "/":
-        alert(x / y);
+        if(num2 <= 0){
+            alert("На нуль ділити не можна!");
+        }
+        else{
+            alert( `Частка Ваших введених чисел = ${num1 / num2}`);
+        }
         break;
 
     default:
